@@ -16,6 +16,7 @@
 		
 		<mapping class="raj.aayush.entities.Employee"/>
 		<mapping class="raj.aayush.embeddable.entities.Employee"/>
+		<mapping class="raj.aayush.embeddable.entities.BackupEmployee"/>
 		
 	</session-factory>
 </hibernate-configuration>

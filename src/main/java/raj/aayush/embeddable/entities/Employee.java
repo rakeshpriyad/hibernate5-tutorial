@@ -1,6 +1,7 @@
 package raj.aayush.embeddable.entities;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -43,7 +44,20 @@ public class Employee  implements Serializable{
 	
 	@Column(name="salary")
 	private Double salary;
+
+	@Column(name="bonus")
+	private BigDecimal bonus;
 	
+	@Column(name="designation",length=50)
+	private String designation;
+	
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	 
 	@ElementCollection
 	@JoinTable(name="address_table",joinColumns=@JoinColumn(name="employee_id"))
 	private Collection<Address> addressList = new HashSet<>();
@@ -89,5 +103,12 @@ public class Employee  implements Serializable{
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", email=" + email + ", doj="
 				+ doj + ", salary=" + salary + "]";
+	}
+	
+	public BigDecimal getBonus() {
+		return bonus;
+	}
+	public void setBonus(BigDecimal bonus) {
+		this.bonus = bonus;
 	}
 }
