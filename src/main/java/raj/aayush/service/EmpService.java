@@ -24,4 +24,6 @@ public interface EmpService {
 
 	public Employee byIdLoad(Long id) ;
 	public Optional<Employee> byIdLoadOptional(Long id) ;
+	public List<Employee> getAllEmployees();
+	public Employee getEmployeeById(Long id);
 }
