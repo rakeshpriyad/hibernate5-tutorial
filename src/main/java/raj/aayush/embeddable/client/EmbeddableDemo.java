@@ -49,7 +49,7 @@ public class EmbeddableDemo {
 		}
 	}
 	
-	private static Employee getEmployee(Integer i){
+	public static Employee getEmployee(Integer i){
 		Employee employee= new Employee();
 		employee.setEmployeeName("Barry Bingel"+i);
 		employee.setEmail("barry"+ i +".cs2017@gmail.com");
